@@ -1,0 +1,9 @@
+name: IPFS Desktop
+version: # if empty auto extract from git tag
+disable_license: true # license from remote or currect license html or markdown
+license: LICENSE
+icon: # auto extract icon from exe
+target: ./dist # target directory or single .exe
+main: gowindle.exe # the main _execuble
+includes: [] # define which file should be bundle
+output: "./release/{{.name}} {{.version}} Installer.exe"
