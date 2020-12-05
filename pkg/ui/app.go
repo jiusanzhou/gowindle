@@ -39,7 +39,6 @@ func NewApp(title string) (*App, error) {
 
 	go func() {
 		for {
-
 			time.Sleep(5 * time.Second)
 			app.Title += "."
 
