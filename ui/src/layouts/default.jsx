@@ -1,43 +1,16 @@
 import React from 'react';
-import { Flex, Box, SimpleGrid } from '@chakra-ui/react';
-import { ColorModeSwitcher } from '../views/ColorModeSwitcher';
-
-const Header = ({ ...props }) => {
-  return (
-    <SimpleGrid as="header" m="0 auto" h="100%" alignItems="center" {...props}>
-      <ColorModeSwitcher justifySelf="flex-end" />
-    </SimpleGrid>
-  );
-};
-
-const Footer = () => {
-  return <Flex as="footer"></Flex>;
-};
+import TitleBar from '../views/TitleBar';
 
 // maxW ??? of page
 
 export default ({ children, header = {}, footer = {}, ...props }) => {
   return (
-    <Box>
-      <Box
-        top={0}
-        left={0}
-        right={0}
-        w="100%"
-        h={['3.5em', '4em', '4em', '5em']}
-        position="fixed"
-        borderBottomWidth="1px"
-        borderBottomStyle="solid"
-        // borderBottom="1px solid #e2e2e2"
-        // borderBottomColor={useColorModeValue('#e2e2e2', 'rgba(255, 255, 255, 0.16)')}
-      >
-        <Header maxW={['95%', '80%', '80%', '68em']} {...header} />
-      </Box>
+    <div className="select-none bg-gradient-to-r__ from-green-200 to-blue-300">
+      <TitleBar className="h-8 md:h-10 lg:h-12 xl:h-14" />
       {/* the main body for page */}
-      <Box as="main" pt={['3.5em', '4em', '4em', '5em']} minH="100vh" d="flex">
+      <div as="main" className="flex min-h-screen pt-8 md:pt-10 lg:pt-12 xl:pt-14">
         {children}
-      </Box>
-      <Footer {...footer} />
-    </Box>
+      </div>
+    </div>
   );
 };

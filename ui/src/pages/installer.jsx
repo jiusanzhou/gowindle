@@ -1,35 +1,49 @@
 import React from 'react';
-import {
-  Box,
-  Button,
-  Center,
-  CircularProgress,
-  CircularProgressLabel,
-  Progress,
-  ProgressLabel,
-  Text,
-} from '@chakra-ui/react';
+import { useState } from 'preact/hooks';
+
+import Actions from '../views/Actions';
+import StepBar from '../views/StepBar';
+
+// Vertical or
 
 export default ({ ...props }) => {
+  const [current, setCurrent] = useState(0);
+
   return (
-    <Center w="100%">
-      <Box w="100%">
-        <Text>在线安装...</Text>
+    <div className="w-full flex-row">
+      <div className="bg-gray-100 w-1/4 h-full">
+        {/* left nav or top */}
+        <StepBar steps={_demoSteps} current={current} className="pt-4" />
+      </div>
+      <div className="flex-grow bg-green-100">
+        {/* main panel */}
+        <div className=""></div>
 
-        <Box p="2">
-          <CircularProgress value="30">
-            <CircularProgressLabel>100%</CircularProgressLabel>
-          </CircularProgress>
-        </Box>
-
-        <Box p="2">
-          <Progress value="30">
-            <ProgressLabel>30%</ProgressLabel>
-          </Progress>
-        </Box>
-
-        <Button>立即安装</Button>
-      </Box>
-    </Center>
+        <Actions
+          total={_demoSteps.length}
+          current={current}
+          onPrevious={() => setCurrent(current - 1)}
+          onNext={() => setCurrent(current + 1)}
+        />
+      </div>
+    </div>
   );
 };
+
+const _demoSteps = [
+  {
+    title: '欢迎使用',
+  },
+  {
+    title: '协议须知',
+  },
+  {
+    title: '安装选项',
+  },
+  {
+    title: '开始安装',
+  },
+  {
+    title: '安装完成',
+  },
+];

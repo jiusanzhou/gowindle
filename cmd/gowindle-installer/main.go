@@ -32,7 +32,7 @@ import (
 // - Complete: (create desktop shortcuts, add to Start Menu)
 
 func main() {
-	app, err := ui.NewApp("MDEV 安装")
+	app, err := ui.NewApp("GoWindle Installer")
 	if err != nil {
 		log.Fatalln(err)
 		return

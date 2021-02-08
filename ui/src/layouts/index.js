@@ -1,4 +1,5 @@
-import React from 'react';
+import { h } from 'preact';
+/** @jsx h */
 
 import empty from './empty';
 import minimal from "./minimal";
@@ -7,6 +8,7 @@ import _default from './default';
 // multi layout
 const _layouts = {
   empty,
+  minimal,
   default: _default,
 };
 
@@ -28,5 +30,5 @@ export default ({ layout = 'empty', ...props }) => {
   }
 
   // create children in here???
-  return React.createElement(_layouts[name] || empty, _props)
+  return h(_layouts[name] || empty, _props)
 };

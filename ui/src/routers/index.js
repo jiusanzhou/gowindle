@@ -4,13 +4,13 @@ import Installer from "../pages/installer"
 
 export default [
     {
+        layout: 'default',
         path: '/',
-        layout: 'default', // { name: 'default' }
         page: Index,
     },
     {
         path: '/installer',
-        layout: 'minimal',
+        layout: 'default',
         page: Installer,
     },
 

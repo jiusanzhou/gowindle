@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" style="behavior:'window-sizer';">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="..\styles\tailwind.min.css">
+    <link rel="stylesheet" href="..\styles\ui.css" />
+    <link rel="stylesheet" href="..\styles\tabs.css" />
+    <title></title>
+</head>
+    <body class="m-0 bg-indigo-300 w-full h-full" >
+        <div style='behavior:"window-command";' class="w-full h-4 block" command="window-caption" >
+            <div class="w-full text-sm">
+                <a class="float-right text-white hover:bg-red-500 hover:text-white active:bg-red-500"
+                    command="window-close">r</a>
+                <!-- <a class="float-right text-white hover:bg-gray-500 hover:text-white active:bg-grey-500"
+                    command="window-max">1</a> -->
+                <a class="float-right text-white hover:bg-gray-500 hover:text-white active:bg-grey-500"
+                    command="window-min">0</a>
+            </div>
+       </div>
+       
+        <div class="tabs"  > 
+         <ul class="strip " >
+            <li panel="panel1" selected><i class="fa fa-xl fa-home"></i>首 页</li>
+            <li panel="panel2"><i class="fa fa-xl fa-download pr-2"></i>下 载</li>
+            <li panel="panel3"><i class="fa fa-xl fa-home pr-2"></i>入 门</li> 
+            <li panel="panel4"><i class="fa fa-xl fa-home pr-2"></i>文 档</li> 
+         </ul>
+       
+         <div name="panel1" >
+             在超链接的URL前面加上tabs://的前缀,例如<br />
+            <a href="tabs://about://blank" title="<img src='..\images\document.png'>页 面" target="_blank">tabs://about://blank</a> <br /><br />
+             然后在超链接的 title属性中指定新建选项卡的标题,<br />
+             最后指定用target属性指定目标选项卡的名字,"_blank"表示新建选项卡 <br /> 
+             
+             符合以上条件的超链接 - 点击则会在选项卡页面中打开,<br /><br />  
+             这种动态创建的选项项，默认会添加一个关闭按钮, 注意这个按钮在CSS中要指定 float:right 以向右浮动
+         </div> 
+          <div name="panel2"> 
+             这是第二个选项页,其中name属性指定选项卡名字  
+         </div>
+         <div name="panel3"> 
+             这是第三个选项页,其中name属性指定选项卡名字   
+         </div>  
+         <div name="panel4"> 
+             这是第4个选项页,其中name属性指定选项卡名字  
+         </div> 
+       </div>
+        
+    </body>
+</html>
