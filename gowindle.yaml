@@ -1,7 +1,7 @@
 name: IPFS Desktop
 version: # if empty auto extract from git tag
 disable_license: true # license from remote or currect license html or markdown
-license: LICENSE
+license: LICENSE # path to load the file
 icon: # auto extract icon from exe
 target: ./dist # target directory or single .exe
 main: gowindle.exe # the main _execuble

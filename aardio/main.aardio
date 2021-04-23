@@ -1,8 +1,20 @@
-import win.ui;
-/*DSG{{*/
-mainForm = win.form(text="aardio form";right=973;bottom=619)
-mainForm.add()
-/*}}*/
+import electron.app;
 
-mainForm.show();
+var mainApp = electron.app("GoWindle");
+
+
+mainApp.start({
+    // replace the index url while release
+    indexUrl = "http://127.0.0.1:1234/installer";
+    browserWindow = {
+        title = "GoWindle";
+        width = 640;
+        height = 420;
+        minWidth = 560;
+        minHeight = 380;
+        frame = false;
+        webPreferences = {};
+    };
+});
+
 return win.loopMessage(); 
