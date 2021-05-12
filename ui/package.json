@@ -12,7 +12,7 @@
         "framer-motion": "^2.9.4",
         "mobx": "^6.0.4",
         "mobx-react": "^7.0.5",
-        "postcss": "^7",
+        "postcss": "^8",
         "postcss-modules": "^4.0.0",
         "preact": "^10.5.9",
         "preact-compat": "^3.19.0",
