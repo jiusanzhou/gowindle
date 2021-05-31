@@ -2,6 +2,7 @@ import electron.app;
 
 var mainApp = electron.app("GoWindle");
 
+// start the go or something other processing
 
 mainApp.start({
     // replace the index url while release
